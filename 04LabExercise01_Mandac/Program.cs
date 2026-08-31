@@ -8,6 +8,7 @@ namespace _04LabExercise01_Mandac
         {
             bool isRunning = true;
             const float APPLE_PRICE = 32.50f;
+            float total = 0f;
 
             while (isRunning)
             {
@@ -24,7 +25,7 @@ namespace _04LabExercise01_Mandac
                     }
 
                     Console.WriteLine("\n--------------------[ TOTAL COST ]---------------------");
-                    float total = qty * APPLE_PRICE;
+                    total = qty * APPLE_PRICE;
                     Console.WriteLine($"The total price of {qty} apples is: {total:0.00}");
                     Console.WriteLine("The value of converted price is: " + (int)total);
                     Console.WriteLine("=======================================================");
