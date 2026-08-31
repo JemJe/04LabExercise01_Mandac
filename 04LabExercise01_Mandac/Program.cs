@@ -7,8 +7,7 @@ namespace _04LabExercise01_Mandac
         static void Main(string[] args)
         {
             bool isRunning = true;
-            const float APPLE_PRICE = 32.50f;
-            float total = 0f;
+            const double APPLE_PRICE = 32.50;
 
             while (isRunning)
             {
@@ -23,11 +22,12 @@ namespace _04LabExercise01_Mandac
                         Console.WriteLine("[!] ERROR: Input must be greater than 0");
                         return;
                     }
+                    double total = qty * APPLE_PRICE;
+                    double convertedPrice = (int)total;
 
                     Console.WriteLine("\n--------------------[ TOTAL COST ]---------------------");
-                    total = qty * APPLE_PRICE;
-                    Console.WriteLine($"The total price of {qty} apples is: {total:0.00}");
-                    Console.WriteLine("The value of converted price is: " + (int)total);
+                    Console.WriteLine("The total price of " + qty + " apples is: " + total.ToString("0.00"));
+                    Console.WriteLine("The value of converted price is: " + convertedPrice);
                     Console.WriteLine("=======================================================");
 
                 }
